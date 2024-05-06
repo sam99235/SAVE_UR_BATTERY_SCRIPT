@@ -5,20 +5,12 @@
 # 2)-IF IT WORKING WHILE IT IS CHARGING [if the user didn't remove the plug shutdown within 2 min in the second time ]
 
 # dev notes
+
 # TO DO LIST
 # if the logging file is bigger then an X bytes in size // has been used 4 7-days do an automatic clean up
-# time on the log file isn't formatted well
-# schedule the scipt using task schceduler api
-# create the save_your_key on registry key in the script
-# push the script in ur git repo put readme, requiremets
-# need the isplugged key to be created using winreg module to push it in the hithub repo
-# use a friendly-ui for the user + bug report + contact email
-# use python -m pip install NAME instead of pip if the same error persists
-# check pep8 and coding best practices
-# 1) if the user didn't see the popup the shutdown  must occur after 3 mins
-# set a setup file {to set up the script in the task schduler and config registry keys for the user in github}
-# the cursur shows the a circle spinning when teh script runs in the background
-# https://learn.microsoft.com/fr-fr/windows/win32/apiindex/windows-api-list
+#set up the script in the task schduler and config registry keys for the user
+# use a friendly-ui for the user + bug report + contact email using modernized tkinter package for UI
+
 
 import win32api as win
 import time
@@ -27,8 +19,6 @@ import logging
 import psutil
 import winreg
 from winotify import Notification, audio
-
-# to avoid getting modulenotfounderror include all packges//modules here
 
 # retreiving the battery life percent
 battery_life_percent = win.GetSystemPowerStatus()['BatteryLifePercent']
