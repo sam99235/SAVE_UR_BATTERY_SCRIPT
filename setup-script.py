@@ -1,15 +1,16 @@
 # script by mejdoubi oussama
+# i make scripts as hobby
 #### WHAT DOES THIS SCRIPT DO####
 # THIS IS A SCHADULED SCRIPT THAT SENDS A POPUP MSG TO THE USER TO TURN OFF THE PC
 # 1)-IF IT IS 20% OR LESS [shutdown after 2 mins]
 # 2)-IF IT WORKING WHILE IT IS CHARGING [if the user didn't remove the plug shutdown within 2 min in the second time ]
 
-# dev notes
-
+####### dev notes ##########
 # TO DO LIST
 # if the logging file is bigger then an X bytes in size // has been used 4 7-days do an automatic clean up
-#set up the script in the task schduler and config registry keys for the user
+# set up the script in the task schduler and config registry keys automatically
 # use a friendly-ui for the user + bug report + contact email using modernized tkinter package for UI
+############################
 
 
 import win32api as win
