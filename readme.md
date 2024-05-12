@@ -1,3 +1,4 @@
+![Alt text](SCRIPTS_DEMO_IMAGES/battery_health_notification.jpg)
 #### WHAT DOES setup-script.py DO####
 # THIS IS A SCHADULED SCRIPT THAT SENDS A POPUP MSG TO THE USER TO TURN OFF THE PC
 # 1)-IF IT IS 20% OR LESS [shutdown after 2 mins]
