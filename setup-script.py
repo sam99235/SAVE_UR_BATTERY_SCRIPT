@@ -38,8 +38,13 @@ try:
     regedit_path = winreg.HKEY_CURRENT_USER
     # openning the sub-software key
     software = winreg.OpenKeyEx(regedit_path, r'SOFTWARE\\')
-    # creating a new sub-key everytime
-    new_key = winreg.CreateKey(software, 'SAVE_YOUR_BATTERY_SCRIPT')
+    # creating a new sub-key with the entry name automatically  new update 9/9/24
+    #opening the SOFTWRE key
+    open_hkey = winreg.OpenKeyEx(winreg.HKEY_CURRENT_USER , r"SOFTWARE") 
+    #creating a new sub-key  BATTERY_HEALTH_GUARDIAN
+    battery_health_guardian_hkey = winreg.CreateKey(open_hkey, "BATTERY_HEALTH_GUARDIAN") 
+    #creating the entry name ispluggedcounter
+    winreg.SetValueEx(battery_health_guardian_hkey, "is_plugged_counter", 0, winreg.REG_DWORD, None)
     # logging file config
     logging.basicConfig(level=logging.WARNING, filename='D:/Desktop/cody/myworkenv/save_ur_battery.log',
                         filemode='a', format="%(asctime)s - %(levelname)s - %(message)s")
