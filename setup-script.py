@@ -11,8 +11,6 @@
 # set up the script in the task schduler and config registry keys automatically
 # use a friendly-ui for the user + bug report + contact email using modernized tkinter package for UI
 ############################
-
-
 import win32api as win
 import time
 import subprocess
@@ -27,11 +25,11 @@ battery_life_percent = win.GetSystemPowerStatus()['BatteryLifePercent']
 isplugged_counter_value = 0x00000000  # false
 # notification objects
 battery_low_alert = Notification('SAVE UR BATTERY LIFE', 'LOW BATTERY',
-                                 "2 MINS YOUR PC WILL SHUTDOWN\nPLEASE TURN IT OFF", 'D:/Desktop/cody/myworkenv/Battery-Low.ico', 'long')
+                                 "2 MINS YOUR PC WILL SHUTDOWN\nPLEASE TURN IT OFF", 'https://raw.githubusercontent.com/sam99235/SAVE_UR_BATTERY_SCRIPT/main/Battery-Low.ico', 'long')
 plugged_and_on_alert = Notification('SAVE UR BATTERY LIFE', 'PLUGGED AND RUNNING',
-                                    "PLEASE DO REMOVE THE PLUG WHILE USING THE LAPTOP", 'D:/Desktop/cody/myworkenv/Battery-Low.ico', 'long')
+                                    "PLEASE DO REMOVE THE PLUG WHILE USING THE LAPTOP", 'https://raw.githubusercontent.com/sam99235/SAVE_UR_BATTERY_SCRIPT/main/Battery-Low.ico', 'long')
 last_shutdown_alert = Notification('SAVE UR BATTERY LIFE', 'BYE,YOU MADE ME DO IT',
-                                   "2 MINS LEFT YOUR PC WILL SHUTDOWN", 'D:/Desktop/cody/myworkenv/Battery-Low.ico', 'long')
+                                   "2 MINS LEFT YOUR PC WILL SHUTDOWN", 'https://raw.githubusercontent.com/sam99235/SAVE_UR_BATTERY_SCRIPT/main/Battery-Low.ico', 'long')
 # i used error handling to log any potential error
 try:
     # registry keys path
@@ -46,7 +44,7 @@ try:
     #creating the entry name ispluggedcounter
     winreg.SetValueEx(battery_health_guardian_hkey, "is_plugged_counter", 0, winreg.REG_DWORD, None)
     # logging file config
-    logging.basicConfig(level=logging.WARNING, filename='D:/Desktop/cody/myworkenv/save_ur_battery.log',
+    logging.basicConfig(level=logging.WARNING, filename='%USERPROFILE%/save_ur_battery.log',
                         filemode='a', format="%(asctime)s - %(levelname)s - %(message)s")
 
     if battery_life_percent <= 20:
