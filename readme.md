@@ -7,17 +7,3 @@
 [AN ALERT NOTIFICATION WILL BE SENT TO THE  USER TO REMOVE THE PLUG AND THE SECOND TIME IF THE USER DIDN'T REMOVE THE PLUG A SHUTDOWN WILL BE IN 2 MINS]
 
 ## SUPPORT  [WINDOWS ONLY] 
-
-
-###setup requirements
-python 3.12
-### required modules 
-##NOTE all these modules come pre-installed with python programme
-###if a there is a missing one try to install it using pip3 
-win32api
-time
-subprocess
-logging
-psutil
-winreg
-winotify 
